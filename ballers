@@ -1783,13 +1783,13 @@ end
 
 pcall(function()
 
-	Rig["WDW_FoamFinger"]:Destroy()
+	Rig["International Fedora"]:Destroy()
 
 end)
 
 spawn(function()
 
-	local accessory = Rig.Parent["WDW_FoamFinger"].Handle
+	local accessory = Rig.Parent["International Fedora"].Handle
 
 	local a0accessory = Instance.new("Attachment")
 
