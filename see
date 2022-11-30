@@ -1,4 +1,4 @@
-clickfling = true -- set this to false if u dont want click fling or use torso fling
+clickfling = false -- set this to false if u dont want click fling or use torso fling
 
 function rmesh(a)
 if not (workspace[game.Players.LocalPlayer.Name][a].Handle:FindFirstChild('Mesh') or workspace[game.Players.LocalPlayer.Name][a].Handle:FindFirstChild('SpecialMesh')) then return end
@@ -81,15 +81,6 @@ Mode='1'
 end
 end)
 
-attacklol=game.Players.LocalPlayer:GetMouse().Button1Down:Connect(function()
-Mode='Attack1'
-wait(0.2) -- time of attack u can edit this
-Mode='Attack2'
-wait(0.2)
-Mode='Attack3'
-wait(0.2)
-Mode ='1' -- change this mode to whatever u want the mode to be after attacking
-end)
 
 coroutine.wrap(function()
 while true do -- anim changer
@@ -121,7 +112,7 @@ if Root.Velocity.y > 1 then -- jump
 elseif Root.Velocity.y < -1 then -- fall
 
 elseif Root.Velocity.Magnitude < 2 then -- idle
-hat('SamuraiHat','Torso',CFrame.new(0,0,0),CFrame.new(0+0*math["cos"](sine/10),0.39+0*math["sin"](sine/10),-0.68+0*math["cos"](sine/10))*CFrame.Angles(math.rad(-70.83+0*math["cos"](sine/10)),math.rad(0+13.23*math["cos"](sine/10)),math.rad(0+0*math["cos"](sine/10))),true)
+hat('Pal Hair','RightArm',CFrame.new(0,-1,0),CFrame.new(0+0*math["cos"](sine/10),0.39+0*math["sin"](sine/10),-0.68+0*math["cos"](sine/10))*CFrame.Angles(math.rad(-70.83+0*math["cos"](sine/10)),math.rad(0+13.23*math["cos"](sine/10)),math.rad(0+0*math["cos"](sine/10))),true)
 NECK.C0=NECK.C0:Lerp(CFrame.new(0+0*math.cos(sine/10),1+0*math.cos(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
 RJ.C0=RJ.C0:Lerp(CFrame.new(0+0*math.cos(sine/10),-1.22+0.1*math.sin(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(-93.76+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
 RS.C0=RS.C0:Lerp(CFrame.new(1.5+0*math.cos(sine/10),0.5+0.1*math.sin(sine/10),-0.14+0*math.cos(sine/10))*CFrame.Angles(math.rad(89.64+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
@@ -131,7 +122,7 @@ LH.C0=LH.C0:Lerp(CFrame.new(-0.5+0*math.cos(sine/10),-1+0*math.cos(sine/10),0+0*
 elseif Root.Velocity.Magnitude > 20 then -- run
 
 elseif Root.Velocity.Magnitude < 20 then -- walk
-hat('SamuraiHat','Torso',CFrame.new(0,0,0),CFrame.new(0+0*math["cos"](sine/10),0.39+0*math["sin"](sine/10),-0.68+0*math["cos"](sine/10))*CFrame.Angles(math.rad(-70.83+0*math["cos"](sine/10)),math.rad(0+13.23*math["cos"](sine/10)),math.rad(0+0*math["cos"](sine/10))),true)
+hat('Pal Hair','RightArm',CFrame.new(0,0,0),CFrame.new(0+0*math["cos"](sine/10),0.39+0*math["sin"](sine/10),-0.68+0*math["cos"](sine/10))*CFrame.Angles(math.rad(-70.83+0*math["cos"](sine/10)),math.rad(0+13.23*math["cos"](sine/10)),math.rad(0+0*math["cos"](sine/10))),true)
 NECK.C0=NECK.C0:Lerp(CFrame.new(0+0*math.cos(sine/10),1+0*math.cos(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
 RJ.C0=RJ.C0:Lerp(CFrame.new(0+0*math.cos(sine/10),-1.22+0.1*math.sin(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(-93.76+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
 RS.C0=RS.C0:Lerp(CFrame.new(1.5+0*math.cos(sine/10),0.5+0.1*math.sin(sine/10),-0.14+0*math.cos(sine/10))*CFrame.Angles(math.rad(89.64+25*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
@@ -144,7 +135,7 @@ elseif Mode == '2' then
 if Root.Velocity.y > 1 then -- jump
 elseif Root.Velocity.y < -1 then -- fall
 elseif Root.Velocity.Magnitude < 2 then -- idle
-hat('SamuraiHat','Torso',CFrame.new(0,0,0),CFrame.new(0+0*math["cos"](sine/10),0.39+0*math["sin"](sine/10),-0.68+0*math["cos"](sine/10))*CFrame.Angles(math.rad(-70.83+0*math["cos"](sine/10)),math.rad(0+13.23*math["cos"](sine/10)),math.rad(0+0*math["cos"](sine/10))),true)
+hat('Pal Hair','RightArm',CFrame.new(0,0,0),CFrame.new(0+0*math["cos"](sine/10),0.39+0*math["sin"](sine/10),-0.68+0*math["cos"](sine/10))*CFrame.Angles(math.rad(-70.83+0*math["cos"](sine/10)),math.rad(0+13.23*math["cos"](sine/10)),math.rad(0+0*math["cos"](sine/10))),true)
 NECK.C0=NECK.C0:Lerp(CFrame.new(0+0*math.cos(sine/10),1+0*math.cos(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
 RJ.C0=RJ.C0:Lerp(CFrame.new(0+0*math.cos(sine/10),-1.22+0.1*math.sin(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(-93.76+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
 RS.C0=RS.C0:Lerp(CFrame.new(1.5+0*math.cos(sine/10),0.5+0.1*math.sin(sine/10),-0.14+0*math.cos(sine/10))*CFrame.Angles(math.rad(89.64+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
@@ -154,7 +145,7 @@ LH.C0=LH.C0:Lerp(CFrame.new(-0.5+0*math.cos(sine/10),-1+0*math.cos(sine/10),0+0*
 elseif Root.Velocity.Magnitude > 20 then -- run
 
 elseif Root.Velocity.Magnitude < 20 then -- walk
-hat('SamuraiHat','Torso',CFrame.new(0,0,0),CFrame.new(0+0*math["cos"](sine/10),0.39+0*math["sin"](sine/10),-0.68+0*math["cos"](sine/10))*CFrame.Angles(math.rad(-70.83+0*math["cos"](sine/10)),math.rad(0+13.23*math["cos"](sine/10)),math.rad(0+0*math["cos"](sine/10))),true)
+hat('Pal Hair','RightArm',CFrame.new(0,0,0),CFrame.new(0+0*math["cos"](sine/10),0.39+0*math["sin"](sine/10),-0.68+0*math["cos"](sine/10))*CFrame.Angles(math.rad(-70.83+0*math["cos"](sine/10)),math.rad(0+13.23*math["cos"](sine/10)),math.rad(0+0*math["cos"](sine/10))),true)
 NECK.C0=NECK.C0:Lerp(CFrame.new(0+0*math.cos(sine/10),1+0*math.cos(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
 RJ.C0=RJ.C0:Lerp(CFrame.new(0+0*math.cos(sine/10),-1.22+0.1*math.sin(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(-93.76+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
 RS.C0=RS.C0:Lerp(CFrame.new(1.5+0*math.cos(sine/10),0.5+0.1*math.sin(sine/10),-0.14+0*math.cos(sine/10))*CFrame.Angles(math.rad(89.64+25*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
@@ -162,17 +153,6 @@ LS.C0=LS.C0:Lerp(CFrame.new(-1.5+0*math.cos(sine/10),0.5+0.1*math.sin(sine/10),-
 RH.C0=RH.C0:Lerp(CFrame.new(0.5+0*math.cos(sine/10),-1+0*math.cos(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(82+-25*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
 LH.C0=LH.C0:Lerp(CFrame.new(-0.5+0*math.cos(sine/10),-1+0*math.cos(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(82+-25*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2)
 end
-
-elseif Mode == 'Attack1' then --attack clerp 
-NECK.C0=NECK.C0:Lerp(CFrame.new(0+0*math.cos(sine/10),1+0*math.cos(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
-RJ.C0=RJ.C0:Lerp(CFrame.new(0+0*math.cos(sine/10),-0.68+0*math.sin(sine/10),-3.37+0*math.cos(sine/10))*CFrame.Angles(math.rad(-93.76+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
-RS.C0=RS.C0:Lerp(CFrame.new(1.5+0*math.cos(sine/10),0.5+0*math.sin(sine/10),-0.14+0*math.cos(sine/10))*CFrame.Angles(math.rad(188.99+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
-LS.C0=LS.C0:Lerp(CFrame.new(-1.5+0*math.cos(sine/10),0.5+0*math.sin(sine/10),-0.14+0*math.cos(sine/10))*CFrame.Angles(math.rad(188.99+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10))),.2) 
-RH.C0=RH.C0:Lerp(CFrame.new(0.5+0*math.cos(sine/10),-1+0*math.cos(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(5.58+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(5.58+0*math.cos(sine/10))),.2) 
-LH.C0=LH.C0:Lerp(CFrame.new(-0.5+0*math.cos(sine/10),-1+0*math.cos(sine/10),0+0*math.cos(sine/10))*CFrame.Angles(math.rad(5.58+0*math.cos(sine/10)),math.rad(0+0*math.cos(sine/10)),math.rad(-5.58+0*math.cos(sine/10))),.2)
-elseif Mode == 'Attack2' then --attack clerp 
-
-elseif Mode == 'Attack3' then --attack clerp 
 
 end
 srv.RenderStepped:Wait()
