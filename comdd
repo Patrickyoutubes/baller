@@ -342,11 +342,11 @@ chat("-cmds, -sit, -stop moving, -dance, -dance1, -dance2, -dance3, -reset, -blo
   end
   
   if msg:lower():sub(1,5) == "-reset" then
-   game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
+   game.Players.LocalPlayer.Character.Humanoid.Health = 0
   end
  
    if msg:lower():sub(1,5) == "-blockhead" then
-   game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
+   game.Players.LocalPlayer.Character.Head.Mesh:Remove()
   end
  
 end)
