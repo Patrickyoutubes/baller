@@ -345,7 +345,7 @@ chat("-cmds, -sit, -stop moving, -dance, -dance1, -dance2, -dance3, -reset, -blo
    game.Players.LocalPlayer.Character.Humanoid.Health = 0
   end
  
-   if msg:lower():sub(1,7) == "-blockhead" then
+   if msg:lower():sub(1,20) == "-blockhead" then
    game.Players.LocalPlayer.Character.Head.Mesh:Remove()
   end
  
