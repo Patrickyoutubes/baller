@@ -341,11 +341,11 @@ chat("Commands: -move forward, -move backward, -move leftward, -move rightward, 
 chat("-cmds, -sit, -stop moving, -dance, -dance1, -dance2, -dance3, -reset, -blockhead")
   end
   
-  if msg:lower():sub(1,5) == "-reset" then
+  if msg:lower():sub(1,6) == "-reset" then
    game.Players.LocalPlayer.Character.Humanoid.Health = 0
   end
  
-   if msg:lower():sub(1,5) == "-blockhead" then
+   if msg:lower():sub(1,7) == "-blockhead" then
    game.Players.LocalPlayer.Character.Head.Mesh:Remove()
   end
  
