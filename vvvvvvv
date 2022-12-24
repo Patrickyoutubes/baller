@@ -1,0 +1,85 @@
+
+spawn(function()
+while wait() do
+settings().Physics.AllowSleep = false
+game.Players.LocalPlayer.MaximumSimulationRadius = math.huge*math.huge
+setsimulationradius(math.huge*math.huge,math.huge*math.huge)
+end
+end)
+G = game
+_ = wait
+p = G:GetService("Players").LocalPlayer.Character
+
+-- when you reset make sure to re-execute this or just make this execute in a loop
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+game:GetService("RunService").Heartbeat:connect(function()
+v.Velocity = Vector3.new(0,54.61552632553851451417258858415264327,0)
+if p:FindFirstChild("Humanoid").Health == 0 then
+v.Velocity = Vector3.new(0,0,0)
+end
+end)
+end
+end
+
+
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+ Title = "made by baconthehacker";
+ Text = "";
+ Icon = ""})
+Duration = 16;
+function Align(Part1,Part0,Position,Angle,name)
+  local AlignPos = Instance.new("AlignPosition", Part1);
+  AlignPos.Parent.CanCollide = false;
+  AlignPos.ApplyAtCenterOfMass = true;
+  AlignPos.MaxForce = 67752;
+  AlignPos.MaxVelocity = math.huge/9e110;
+  AlignPos.ReactionForceEnabled = false;
+  AlignPos.Responsiveness = 200;
+  AlignPos.RigidityEnabled = false;
+
+  local AlignOrient = Instance.new("AlignOrientation", Part1);
+  AlignOrient.MaxAngularVelocity = math.huge/9e110;
+  AlignOrient.MaxTorque = 67752;
+  AlignOrient.PrimaryAxisOnly = false;
+  AlignOrient.ReactionTorqueEnabled = false;
+  AlignOrient.Responsiveness = 200;
+  AlignOrient.RigidityEnabled = false;
+
+  local AttachmentA=Instance.new("Attachment",Part1);
+
+  local AttachmentB=Instance.new("Attachment",Part0);
+  AttachmentB.Orientation = Angle
+  AttachmentB.Position = Position
+  AttachmentB.Name = name
+
+  AlignPos.Attachment0 = AttachmentA;
+  AlignPos.Attachment1 = AttachmentB;
+
+  AlignOrient.Attachment0 = AttachmentA;
+  AlignOrient.Attachment1 = AttachmentB;
+end
+local Playr = game:GetService("Players")
+local Run = game:GetService("RunService")
+local Core = game:GetService("CoreGui")
+local LocalPlayer = Playr.LocalPlayer
+char = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character["VANS_Umbrella"].Handle.Mesh:Destroy()
+hat = char["VANS_Umbrella"]
+hat.Handle.AccessoryWeld:Destroy();
+Align(hat.Handle,char["Torso"],Vector3.new(0, -2, -0.5),Vector3.new(0, 0, 0),"Broom")
+
+LocalPlayer.Character.Humanoid.WalkSpeed=70 
+LocalPlayer.Character.Humanoid.JumpPower=0.0001 
+Float_Height="1" 
+AnimationId="129342287" 
+local a=Instance.new("Animation") 
+a.AnimationId="rbxassetid://"..AnimationId 
+local a=LocalPlayer.Character.Humanoid:LoadAnimation(a) 
+a:Play() 
+
+a:AdjustSpeed(1) 
+for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(0,0,0)end end local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 
+
+end
