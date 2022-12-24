@@ -11,7 +11,7 @@ Duration = 21;
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
 	Title = "made by Im Patrick";
-	Text = "Sub Im Patrick Today.     [Patrick Teams]";
+	Text = "Sub Im Patrick .Thanks Dark";
 	Icon = "rbxthumb://type=Asset&id=11774242795&w=150&h=150"})
 Duration = 26;
 
