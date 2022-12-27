@@ -1,1 +1,78 @@
-local cont = workspace:WaitForChild("ContentModel")game:GetService("StarterGui"):SetCore("SendNotification", { 	Title = "Made by Im Patrick";	Text = "sub im patrick";	Icon = "rbxthumb://type=Asset&id=11774242795&w=150&h=150"})Duration = 26;local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()local w = library:CreateWindow("NDS Sound") -- Creates the windowlocal b = w:CreateFolder("Sound") -- Creates the folder(U will put here your buttons,etc)local c = w:CreateFolder("Sound2") local z = w:CreateFolder("Sound3") local d = w:CreateFolder("Stop Sound") local e = w:CreateFolder("Remove gui")       b:Button("Rain",function()        cont:FindFirstChild("Sounds").Rain:Play()end)b:Button("RockSound",function()        cont:FindFirstChild("Sounds").RockSound:Play()end)b:Button("Wind",function()        cont:FindFirstChild("Sounds").Wind:Play()end)b:Button("Lightning",function()        cont:FindFirstChild("Sounds").Lightning1:Play()end)z:Button("DirtSound",function()        cont:FindFirstChild("Sounds").DirtSound:Play()end)c:Button("Explosion",function()        cont:FindFirstChild("Sounds").Explosion1:Play()end)c:Button("Explosion2",function()        cont:FindFirstChild("Sounds").Explosion2:Play()end)c:Button("IntenseWind",function()        cont:FindFirstChild("Sounds").IntenseWind:Play()end)z:Button("Lightning2",function()        cont:FindFirstChild("Sounds").Lightning2:Play()end)z:Button("Lightning3",function()        cont:FindFirstChild("Sounds").Lighting3:Play()end)z:Button("Lightning4",function()        cont:FindFirstChild("Sounds").Lightning4:Play()end)c:Button("Lightning5",function()        cont:FindFirstChild("Sounds").Lightning5:Play()end)d:Button("stop sound",function()        for _, v in pairs(cont:FindFirstChild("Sounds"):GetChildren()) do            v:Stop()        endend)e:DestroyGui()
+local cont = workspace:WaitForChild("ContentModel")
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "Made by Im Patrick";
+	Text = "sub im patrick";
+	Icon = "rbxthumb://type=Asset&id=11774242795&w=150&h=150"})
+Duration = 26;
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+
+local w = library:CreateWindow("NDS Sound") -- Creates the window
+
+local b = w:CreateFolder("Sound") -- Creates the folder(U will put here your buttons,etc)
+
+local c = w:CreateFolder("Sound2") 
+local z = w:CreateFolder("Sound3") 
+local d = w:CreateFolder("Stop Sound") 
+local e = w:CreateFolder("Remove gui") 
+    
+  b:Button("Rain",function()
+        cont:FindFirstChild("Sounds").Rain:Play()
+end)
+
+b:Button("RockSound",function()
+        cont:FindFirstChild("Sounds").RockSound:Play()
+end)
+
+b:Button("Wind",function()
+        cont:FindFirstChild("Sounds").Wind:Play()
+end)
+
+b:Button("Lightning",function()
+        cont:FindFirstChild("Sounds").Lightning1:Play()
+end)
+
+z:Button("DirtSound",function()
+        cont:FindFirstChild("Sounds").DirtSound:Play()
+end)
+
+c:Button("Explosion",function()
+        cont:FindFirstChild("Sounds").Explosion1:Play()
+end)
+
+c:Button("Explosion2",function()
+        cont:FindFirstChild("Sounds").Explosion2:Play()
+end)
+
+c:Button("IntenseWind",function()
+        cont:FindFirstChild("Sounds").IntenseWind:Play()
+end)
+
+z:Button("Lightning2",function()
+        cont:FindFirstChild("Sounds").Lightning2:Play()
+end)
+
+z:Button("Lightning3",function()
+        cont:FindFirstChild("Sounds").Lighting3:Play()
+end)
+
+z:Button("Lightning4",function()
+        cont:FindFirstChild("Sounds").Lightning4:Play()
+end)
+
+c:Button("Lightning5",function()
+        cont:FindFirstChild("Sounds").Lightning5:Play()
+end)
+
+
+
+
+d:Button("stop sound",function()
+        for _, v in pairs(cont:FindFirstChild("Sounds"):GetChildren()) do
+            v:Stop()
+        end
+end)
+
+e:DestroyGui()
+
